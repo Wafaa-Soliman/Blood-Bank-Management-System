@@ -3,3 +3,44 @@
     margin: 0;
     padding: 0;
 }
+
+/******* Ahmed CSS *******/
+button {
+    text-transform: uppercase;
+    font-weight: 600 !important;
+    color: #eee !important;
+}
+
+.bookmark-title {
+    color: #aaa;
+    font-size: 32px;
+}
+
+
+main .container {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;   
+}
+
+.bookmark-data {
+    background-color: #eee;
+    border-radius: 3px;
+}
+
+.bookmark-data button:hover {
+    box-shadow: 3px 3px #bbb;
+}
+
+.bookmark-data-title {
+    font-size: 28px;
+}
+
+.site-name-text {
+    font-size: 22px;
+}
+
+
+#invalid-name, #invalid-url {
+    display: none;
+}
+/******* Ahmed CSS *******/
