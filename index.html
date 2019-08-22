@@ -6,7 +6,51 @@
 </head>
 
 <body>
-    
+    <!-- Ahmed HTML -->
+  <header class="py-5">
+    <div class="container">
+        <h1 class="bookmark-title">Bookmarker</h1>
+    </div>
+</header>
+
+<main>
+    <div class="container py-5">
+
+        <div class="bookmark-data py-5">
+            <h2 class="bookmark-data-title text-center bg-muted">Bookmark your favorite sites</h2>
+            <div class="bookmark-form text-center py-2">
+                <form class="">
+                    <div class="site-name-container form-group">
+                        <label class="text-black font-weight-bold" for="site-name">Site Name</label>
+                        <input id="site-name" type="text" class="form-control mt-2 col-10 py-1 mx-auto"
+                            placeholder="Bookmark Name">
+                        <div id="invalid-name" class="col-10 mt-2 mx-auto py-1 alert alert-danger"></div>
+                    </div>
+                    <div class="site-url-container form-group">
+                        <label class="text-black font-weight-bold" for="site-name">Site URL</label>
+                        <input id="site-url" type="text" class="form-control mt-2 py-1 col-10 mx-auto"
+                            placeholder="Bookmark URL">
+                        <div id="invalid-url" class="col-10 mt-2 mx-auto py-1 alert alert-danger"></div>
+                    </div>
+                    <button id="submit-btn" type="button" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="bookmarks-container" class="p-4">
+
+        </div>
+    </div>
+</main>
+
+<footer class="py-2">
+    <div class="container">
+        <span class="text-muted font-weight-bold" style="color: #ccc;">© 2019 Bookmarker Inc.</span>
+    </div>
+</footer>
+
+
+
   <script src="js/all.min.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
