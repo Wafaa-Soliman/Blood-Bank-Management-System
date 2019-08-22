@@ -1,62 +1,71 @@
-<!DOCTYPE html>
+<html>
+
 <head>
-  <link rel="stylesheet" href="css/all.css">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<body>
-  
-  <h1>Hello world from MOHAMMED SALLAM</h1>
-    <!-- Ahmed HTML -->
-  <header class="py-5">
-    <div class="container">
-        <h1 class="bookmark-title">Bookmarker</h1>
-    </div>
-</header>
+<body class="bg-dark text-light">
 
-<main>
-    <div class="container py-5">
-
-        <div class="bookmark-data py-5">
-            <h2 class="bookmark-data-title text-center bg-muted">Bookmark your favorite sites</h2>
-            <div class="bookmark-form text-center py-2">
-                <form class="">
-                    <div class="site-name-container form-group">
-                        <label class="text-black font-weight-bold" for="site-name">Site Name</label>
-                        <input id="site-name" type="text" class="form-control mt-2 col-10 py-1 mx-auto"
-                            placeholder="Bookmark Name">
-                        <div id="invalid-name" class="col-10 mt-2 mx-auto py-1 alert alert-danger"></div>
-                    </div>
-                    <div class="site-url-container form-group">
-                        <label class="text-black font-weight-bold" for="site-name">Site URL</label>
-                        <input id="site-url" type="text" class="form-control mt-2 py-1 col-10 mx-auto"
-                            placeholder="Bookmark URL">
-                        <div id="invalid-url" class="col-10 mt-2 mx-auto py-1 alert alert-danger"></div>
-                    </div>
-                    <button id="submit-btn" type="button" class="btn btn-primary">Submit</button>
-                </form>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mohamed Abd EL-Monem</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">First js Assiment <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Second js Assiment</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="form-group" >
+                <label>Select The Program You Want To use</label><br>
+                <select id="selections" onchange="test ()">
+                   <option value="0" disabled selected>Select A program To Use</option>
+                    <option value="1">Print Entered Number</option>
+                    <option value="2">Check If entered Number divided by 3 And 4</option>
+                    <option value="3">Get The Max of Two Entered Numbers</option>
+                    <option value="4">Check If Enterd Number positve or Negitive</option>
+                    <option value="5">Get The Max and The Min of Three Entered Numbers</option>
+                    <option value="6">Check If Enterd Number Even or Odd</option>
+                    <option value="7">Check If Enterd Character Vowel or Consonant</option>
+                    <option value="8">Show All Numbers from One To Entered Number</option>
+                    <option value="9">Show Multiplication Table OfEntered Number</option>
+                    <option value="10">Show Even Numbers from One To Entered Number</option>
+                    <option value="11">Calculate The power for Number</option>
+                    <option value="12">Enter 10 Numbers To get The Average</option>
+                    <option value="13">Enter 10 Numbers and print Them In reverse</option>
+                    <option value="14">Check If entered Number is Prime</option>
+                    <option value="15">Enter 10 Numbers and print Summation</option>
+                    <option value="16">Enter a word To check The Number of vowels  In It</option>
+                    <option value="17">Enter a word To remove vowels  In It</option>
+                </select>
             </div>
+            <div class="" id="inputs"></div>
+            <div class="" id="results"></div>
+
+
+
+
+
+
         </div>
 
-        <div id="bookmarks-container" class="p-4">
-
-        </div>
-    </div>
-</main>
-
-<footer class="py-2">
-    <div class="container">
-        <span class="text-muted font-weight-bold" style="color: #ccc;">© 2019 Bookmarker Inc.</span>
-    </div>
-</footer>
 
 
+    </section>
 
-  <script src="js/all.min.js"></script>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
 </body>
+
 </html>
