@@ -5,11 +5,13 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
   <title>Blood Donation Web Application</title>
-  
+
   <!-- Google Fonts -->
 
   <!-- End Google Fonts -->
+  <link rel='stylesheet' href='css/all.min.css' />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -17,53 +19,59 @@
 <body>
 
   <!-- Home Page -->
-  <nav class="navbar navbar-expand-sm navbar-light  py-1 px-5 bg-white">
-    <a class="navbar-brand h-25" href="#">
-      <img src="imgs/Logo.png" alt=" the Logo">
-    </a>
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="collapsibleNavId">
-      <ul class="navbar-nav  mt-2 mt-lg-0 px-4">
-        <li class="nav-item active ">
-          <a class="nav-link" href="#Home" id="home"> Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item px-3">
-          <a class="nav-link" href="#donorRegistration" id="DonorRegistration"> Donor Registeration</a>
-        </li>
-
-        <li class="nav-item px-3">
-          <a class="nav-link" href="#sendRequest" id="sendRequest"> Send Request </a>
-        </li>
-
-        <li class="nav-item px-3">
-          <a class="nav-link" href="#veiwRequest" id="veiwRequest"> Viesw Requests </a>
-        </li>
-
-        <li class="nav-item px-3">
-          <a class="nav-link" href="#camps" id="camps"> Camps </a>
-        </li>
-
-        <li class="nav-item px-3">
-          <a class="nav-link" href="#login" id="login"> Login </a>
-        </li>
-
-        <li class="nav-item px-3 m-0">
-          <a class="nav-link" href="#search" id="search"> Search </a>
-        </li>
-
-        <li class="nav-item px-3 m-0">
-          <a class="nav-link" href="#contactUs" id="contactUs"> Contact Us </a>
-        </li>
-
-        <li class="nav-item px-3 m-0">
-          <a class="nav-link" href="#about" id="about"> About </a>
-        </li>
-      </ul>
+  <header>
+    <div>
+      <div class='float-left'><img class='img-fluid' src='imgs/Logo.png' alt='logo' /></div>
+      <div class='float-right m-5'>
+        <a class='bg-danger text-white text-decoration-none font-weight-bold rounded py-3 px-5'
+          href='pages/register.html'>Sign Up</a>
+        <a class='bg-danger text-white text-decoration-none font-weight-bold rounded py-3 px-5'
+          href='pages/login.html'>Login</a>
+      </div>
+      <div class='clearfix'></div>
     </div>
-  </nav>
+
+    <nav class='navbar navbar-expand-lg navbar-dark'>
+      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent'
+        aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+      </button>
+
+      <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'>
+            <a class='nav-link' href='home.html'>home</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='pages/about.html'>about</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='pages/register.html'>donor registeration</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='pages/sendRequest.html'>send request</a>
+
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='pages/veiwRequest.html'>view request</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='pages/camps.html'>camps</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='pages/login.html'>login</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='pages/search.html'>search</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='pages/contactUs.html'>contact us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
   <section class="section1 d-flex  align-items-center ">
     <div class="container">
       <div class="row ">
@@ -179,7 +187,8 @@
           <div class="clearfix"></div>
         </div>
         <div class="col-md-6 h-75 py-3 ">
-          <img src="imgs/section4.jpg" class="img-fluid" alt=" Ways to help " title="ways to help " class="img-fluid h-75 w-100">
+          <img src="imgs/section4.jpg" class="img-fluid" alt=" Ways to help " title="ways to help "
+            class="img-fluid h-75 w-100">
         </div>
       </div>
     </div>
@@ -215,6 +224,7 @@
       </div>
     </div>
   </section>
+
   <section class="section6">
     <div class="container-fluid">
       <div class="row">
@@ -316,42 +326,30 @@
   </section>
 
 
-  <footer class="bg-danger">
-    <div class="container">
-      <div class="row ">
-        <div class="col-md-12 ">
-          <div class=" first w-50 m-auto ">
-            <ul class="list-unstyled m-auto  d-flex justify-content-between w-100 p-2 ">
-              <li><a href="#"> Home</a></li>
-              <li><a href="#"> Donor</a></li>
-              <li><a href="#"> Login</a></li>
-              <li><a href="#"> About </a></li>
-              <li><a href="#"> Contact Us </a></li>
-              <div class="clearfix"></div>
-            </ul>
-          </div>
-          <div class=" second  d-flex w-25 m-auto py-2">
-            <ul class="list-unstyled m-auto w-100  d-flex justify-content-between">
-              <li><a href="#"> <i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"> <i class="fab fa-youtube"></i></a></li>
-              <li><a href="#"> <i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"> <i class="fab fa-google-plus-g"></i></a></li>
-              <li><a href="#"> <i class="fab fa-behance"></i></a>
-                <div class="clearfix"></div>
-              </li>
-            </ul>
-          </div>
-          <div class="py-2 w-50 m-auto  text-center">
-            <span><i class="fa fa-copyright" aria-hidden="true"></i></span>
-          </div>
-        </div>
+  <footer>
+    <div id='footer' class='text-center'>
+      <div>
+        <ul class='text-uppercase'>
+          <li><a href='index.html'>home</a></li>
+          <li><a href='pages/register.html'>donor</a></li>
+          <li><a href='pages/login.html'>login</a></li>
+          <li><a href='pages/about.html'>about</a></li>
+          <li><a href='pages/contactUs.html'>contact us</a></li>
+        </ul>
+      </div>
+      <div id='social-icons'>
+        <i class='fab fa-twitter fa-2x text-white m-2'></i>
+        <i class='fab fa-facebook-f fa-2x text-white m-2'></i>
+        <i class='fab fa-youtube fa-2x text-white m-2'></i>
+        <i class='fab fa-instagram fa-2x text-white m-2'></i>
+        <i class='fab fa-google-plus-g fa-2x text-white m-2'></i>
+        <i class='fab fa-behance fa-2x text-white m-2'></i>
       </div>
     </div>
-
   </footer>
 
   <!-- End Home Page -->
+
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/popper.min.js"></script>
