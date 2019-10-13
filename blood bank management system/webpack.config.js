@@ -10,10 +10,7 @@ const pages = ["home", "pages/register"];
 const devMode = process.env.NODE_ENV !== 'production';
 module.exports = {
   entry: [
-    './src/index.js',
-    './src/assets/style.css',
-    './src/assets/about.css'
-
+    './src/index.js'
   ],
   devtool: 'source-map',
   output: {
@@ -22,6 +19,7 @@ module.exports = {
     chunkFilename: "assets/js/[name].[id].js",
   },
   devServer: {
+    inline: false,
     contentBase: './dist'
   },
   module: {
@@ -38,27 +36,13 @@ module.exports = {
         }
       },
       {
-        test: /\.svg$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              emitFile: true,
-              name: 'images/[sha512:hash:base64:7].[ext]',
-              publicPath: '../',
-              outputPath: 'assets/',
-            },
-          },
-        ],
-      },
-      {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               emitFile: true,
-              name: 'images/[sha512:hash:base64:7].[ext]',
+              name: './images/[sha512:hash:base64:7].[ext]',
             },
           },
         ],
@@ -69,7 +53,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'webfonts/[sha512:hash:base64:7].[ext]',
+              name: './webfonts/[sha512:hash:base64:7].[ext]',
               publicPath: '../',
               outputPath: 'assets/',
             }
