@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Blood Bank Management System</title>
+  <link rel='icon' type='image/png' href='../images/icon.png' class='rounded'/>
+  <link rel='stylesheet' href='../css/all.min.css' />
+  <link rel='stylesheet' href='../css/bootstrap.min.css' />
+  <link rel='stylesheet' href='../css/style.css' />
+  <style>
+      footer #footer{background-color: #DC3545;}
+  #footer ul li {list-style: none;display: inline-block;font-weight: bolder;}
+  #footer ul li a{text-decoration: none;color: #ffffff;padding: 10px;}
+  .location #loc1{cursor: pointer;color: #196cb3;font-weight: bold}
+  .location a{color: #555555;cursor: pointer;font-weight: bold;font-size: 20px;}
+  .location a:hover, .location #loc1LINK:hover{color: #ACBECC;text-decoration: underline;}
+  .direction:hover{color:cornsilk;background-color: black}
+  </style>
+</head>
+<body>
+    <header>
+        <div>
+          <div class='float-left'><img class='img-fluid' src='../images/logo.png' alt='logo'/></div>
+          <div class='float-right m-5'>
+            <a class='bg-danger text-white text-decoration-none font-weight-bold rounded py-3 px-5' href='register.html'>Sign Up</a>
+            <a class='bg-danger text-white text-decoration-none font-weight-bold rounded py-3 px-5' href='login.html'>Login</a>
+          </div>
+          <div class='clearfix'></div>
+        </div>
+
+    <nav class='navbar navbar-expand-lg navbar-light'>
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+      <ul class='navbar-nav mr-auto'>
+        <li class='nav-item active'>
+          <a class='nav-link' href='../home.html'>home</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='about.html'>about</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='register.html'>donor registeration</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='sendRequest.html'>send request</a>
+
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='veiwRequest.html'>view request</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='camps.html'>camps</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='login.html'>login</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='search.html'>search</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='contactUs.html'>contact us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </header>
+ 
+
+
+
+
+  <section class="events">
+    <div class="w-50 mx-auto p-5">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="loc1-tab" data-toggle="tab" href="#loc1" role="tab" aria-controls="loc1" aria-selected="true">Cairo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="loc2-tab" data-toggle="tab" href="#loc2" role="tab" aria-controls="loc2" aria-selected="false">Alexandria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="loc3-tab" data-toggle="tab" href="#loc3" role="tab" aria-controls="contact" aria-selected="false">Al-Gharbia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="loc4-tab" data-toggle="tab" href="#loc4" role="tab" aria-controls="loc4" aria-selected="true">Al-Beheira</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="loc5-tab" data-toggle="tab" href="#loc5" role="tab" aria-controls="loc5" aria-selected="true">Qena</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="loc6-tab" data-toggle="tab" href="#loc6" role="tab" aria-controls="loc6" aria-selected="true">Dakahlia</a>
+          </li>
+      </ul>
+    </div>
+
+
+    <div class="container-fluid tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="loc1" role="tabpanel" aria-labelledby="loc1-tab">
+        <div class="row m-3 justify-content-center" id="locations">
+              <div class="col-md-4">
+                  <div class="card border-0" style="width: 18rem;">
+                      <img src="../images/40621677_l.jpg" class="card-img-top img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Egyptian Red Crescent - ERC</h5>
+                        <p class="text-muted">egyptianrc.org</p>
+                        <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> CAIRO, EL AZBAKEYA، Al Gayarah, Azbakeya, Cairo Governorate, Egypt</p>
+                        <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> +20 2 25761587</p>
+                        <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                      </div>
+                      <div class="card-body">
+                        <a href="register.html" class="btn btn-danger">Send Request</a>
+                        <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc2">Direction</a>
+                        <div class="modal fade" id="geoLoc2" tabindex="-1" role="dialog" aria-labelledby="geoLoc2Label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=CAIRO%2C%20EL%20AZBAKEYA%D8%8C%20Al%20Gayarah%2C%20Azbakeya%2C%20Cairo%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+                      </div>
+                    </div>
+          <div class="col-md-4">
+              <div class="card border-0" style="width: 18rem;">
+                  <img src="../images/blood-donation-vector-concept_42053-282.jpg" class="card-img-top img-fluid" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">National Blood Bank Center</h5>
+                    <p class="text-muted">The National Center for Blood Transfusion Services</p>
+                    <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> 51 Wezaret El Zeraa St.، Al Agouzah, GIZA، Giza Governorate, Egypt</p>
+                    <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> +20 2 37611111</p>
+                    <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                  </div>
+                  <div class="card-body">
+                    <a href="register.html" class="btn btn-danger">Send Request</a>
+                    <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc2">Direction</a>
+                    <div class="modal fade" id="geoLoc2" tabindex="-1" role="dialog" aria-labelledby="geoLoc2Label" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=51%20Wezaret%20El%20Zeraa%20St.%D8%8C%20Al%20Agouzah%2C%20GIZA%D8%8C%20Giza%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:center;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+          <div class="col-md-4">
+              <div class="card border-0" style="width: 18rem;">
+                  <img src="../images/40621677_l.jpg" class="card-img-top img-fluid" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">The main blood - Bank of Ain Shams</h5>
+                    <p class="text-muted">The main blood - Bank of Ain Shams</p>
+                    <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> ممر خاص مستشفى الدمرداش، Al Abbaseyah Al Qebleyah, Al Waili, Cairo Governorate, Egypt</p>
+                    <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> Not available</p>
+                    <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                  </div>
+                  <div class="card-body">
+                    <a href="register.html" class="btn btn-danger">Send Request</a>
+                    <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc3">Direction</a>
+                    <div class="modal fade" id="geoLoc3" tabindex="-1" role="dialog" aria-labelledby="geoLoc3Label" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%D9%85%D9%85%D8%B1%20%D8%AE%D8%A7%D8%B5%20%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89%20%D8%A7%D9%84%D8%AF%D9%85%D8%B1%D8%AF%D8%A7%D8%B4%D8%8C%20Al%20Abbaseyah%20Al%20Qebleyah%2C%20Al%20Waili%2C%20Cairo%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+          </div>
+      </div>
+      </div>
+        
+
+            <div class="tab-pane fade show" id="loc2" role="tabpanel" aria-labelledby="loc2-tab">
+              <div class="row m-3 justify-content-center" id="locations">
+                    <div class="col-md-4">
+                        <div class="card border-0" style="width: 18rem;">
+                            <img src="../images/blood-donation_36722-281.jpg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Alexandria Regional Blood Transfusion Center</h5>
+                              <p class="text-muted">ش عبد القادر ابو عقدة، كوم الدكة شرق، قسم العطارين، الإسكندرية</p>
+                              <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> ش عبد القادر ابو عقدة، Kom Ad Dakah Sharq, Ataren, Alexandria Governorate, Egypt</p>
+                              <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> +20 3 4951963</p>
+                              <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                            </div>
+                            <div class="card-body">
+                              <a href="register.html" class="btn btn-danger">Send Request</a>
+                              <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc2-first">Direction</a>
+                              <div class="modal fade" id="geoLoc2-first" tabindex="-1" role="dialog" aria-labelledby="geoLoc2-firstLabel" aria-hidden="true">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%D8%B4%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D8%B1%20%D8%A7%D8%A8%D9%88%20%D8%B9%D9%82%D8%AF%D8%A9%D8%8C%20Kom%20Ad%20Dakah%20Sharq%2C%20Ataren%2C%20Alexandria%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                              <div class="card border-0" style="width: 18rem;">
+                                  <img src="../images/blood-donation_36722-281.jpg" class="card-img-top img-fluid" alt="...">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Alexandria Regional Blood Transfusion Center</h5>
+                                    <p class="text-muted">ش عبد القادر ابو عقدة، كوم الدكة شرق، قسم العطارين، الإسكندرية</p>
+                                    <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> ش عبد القادر ابو عقدة، Kom Ad Dakah Sharq, Ataren, Alexandria Governorate, Egypt</p>
+                                    <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> +20 3 4951963</p>
+                                    <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                                  </div>
+                                  <div class="card-body">
+                                    <a href="register.html" class="btn btn-danger">Send Request</a>
+                                    <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc2-first">Direction</a>
+                                    <div class="modal fade" id="geoLoc2-first" tabindex="-1" role="dialog" aria-labelledby="geoLoc2-firstLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%D8%B4%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D8%B1%20%D8%A7%D8%A8%D9%88%20%D8%B9%D9%82%D8%AF%D8%A9%D8%8C%20Kom%20Ad%20Dakah%20Sharq%2C%20Ataren%2C%20Alexandria%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card border-0" style="width: 18rem;">
+                                        <img src="../images/blood-donation_36722-281.jpg" class="card-img-top img-fluid" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Alexandria Regional Blood Transfusion Center</h5>
+                                          <p class="text-muted">ش عبد القادر ابو عقدة، كوم الدكة شرق، قسم العطارين، الإسكندرية</p>
+                                          <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> ش عبد القادر ابو عقدة، Kom Ad Dakah Sharq, Ataren, Alexandria Governorate, Egypt</p>
+                                          <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> +20 3 4951963</p>
+                                          <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                                        </div>
+                                        <div class="card-body">
+                                          <a href="register.html" class="btn btn-danger">Send Request</a>
+                                          <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc2-first">Direction</a>
+                                          <div class="modal fade" id="geoLoc2-first" tabindex="-1" role="dialog" aria-labelledby="geoLoc2-firstLabel" aria-hidden="true">
+                                              <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%D8%B4%20%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D9%82%D8%A7%D8%AF%D8%B1%20%D8%A7%D8%A8%D9%88%20%D8%B9%D9%82%D8%AF%D8%A9%D8%8C%20Kom%20Ad%20Dakah%20Sharq%2C%20Ataren%2C%20Alexandria%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                      </div>
+            </div>
+            </div>
+
+
+            <div class="tab-pane fade show" id="loc3" role="tabpanel" aria-labelledby="loc3-tab">
+                <div class="row m-3 justify-content-center" id="locations">
+                      <div class="col-md-4">
+                          <div class="card border-0" style="width: 18rem;">
+                              <img src="../images/blood-donation_36722-281.jpg" class="card-img-top img-fluid" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Blood Bank</h5>
+                                <p class="text-muted">Abou Heshmat, طنطا (قسم 2)، طنطا، الغربية</p>
+                                <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> Abou Heshmat, Tanta Qism 2, Tanta, Gharbia Governorate, Egypt</p>
+                                <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> Not available</p>
+                                <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                              </div>
+                              <div class="card-body">
+                                <a href="register.html" class="btn btn-danger">Send Request</a>
+                                <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc3-first">Direction</a>
+                                <div class="modal fade" id="geoLoc3-first" tabindex="-1" role="dialog" aria-labelledby="geoLoc3-firstLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Abou%20Heshmat%2C%20Tanta%20Qism%202%2C%20Tanta%2C%20Gharbia%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>  
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  </div>
+                              </div>
+                            </div>
+              </div>
+              </div>
+
+
+
+
+
+              <div class="tab-pane fade show" id="loc4" role="tabpanel" aria-labelledby="loc4-tab">
+                  <div class="row m-3 justify-content-center" id="locations">
+                        <div class="col-md-4">
+                            <div class="card border-0" style="width: 18rem;">
+                                <img src="../images/blood-donation_36722-281.jpg" class="card-img-top img-fluid" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">بنك الدم - مستشفى عام</h5>
+                                  <p class="text-muted">mohp.gov.eg</p>
+                                  <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> شبرا، قسم دمنهور،، El Beheira Governorate, Egypt</p>
+                                  <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> +20 45 3314489</p>
+                                  <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                                </div>
+                                <div class="card-body">
+                                  <a href="register.html" class="btn btn-danger">Send Request</a>
+                                  <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc4-first">Direction</a>
+                                  <div class="modal fade" id="geoLoc4-first" tabindex="-1" role="dialog" aria-labelledby="geoLoc4-firstLabel" aria-hidden="true">
+                                      <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                              <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=%D8%B4%D8%A8%D8%B1%D8%A7%D8%8C%20%D9%82%D8%B3%D9%85%20%D8%AF%D9%85%D9%86%D9%87%D9%88%D8%B1%D8%8C%D8%8C%20El%20Beheira%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </div>
+                                </div>
+                              </div>
+                </div>
+                </div>
+
+
+
+                <div class="tab-pane fade show" id="loc5" role="tabpanel" aria-labelledby="loc5-tab">
+                    <div class="row m-3 justify-content-center" id="locations">
+                          <div class="col-md-4">
+                              <div class="card border-0" style="width: 18rem;">
+                                  <img src="../images/blood-donation_41050-2173.jpg" class="card-img-top img-fluid" alt="...">
+                                  <div class="card-body">
+                                    <h5 class="card-title">المركز الاقليمى لخدمات نقل الدم بقنا</h5>
+                                    <p class="text-muted">blood-bank-12.business.site</p>
+                                    <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> Unnamed Road, قسم قنا،، Qena Governorate, Egypt</p>
+                                    <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> +20 96 3344842</p>
+                                    <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                                  </div>
+                                  <div class="card-body">
+                                    <a href="register.html" class="btn btn-danger">Send Request</a>
+                                    <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc5-first">Direction</a>
+                                    <div class="modal fade" id="geoLoc5-first" tabindex="-1" role="dialog" aria-labelledby="geoLoc5-firstLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Unnamed%20Road%2C%20%D9%82%D8%B3%D9%85%20%D9%82%D9%86%D8%A7%D8%8C%D8%8C%20Qena%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      </div>
+                                  </div>
+                                </div>
+                  </div>
+                  </div>
+
+
+                  <div class="tab-pane fade show" id="loc6" role="tabpanel" aria-labelledby="loc6-tab">
+                      <div class="row m-3 justify-content-center" id="locations">
+                            <div class="col-md-4">
+                                <div class="card border-0" style="width: 18rem;">
+                                    <img src="../images/vector-set-blood-donation_60352-2301.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Blood Bank Mansoura Sheikh Hassanein</h5>
+                                      <p class="text-muted">رقم 1، المنصورة (قسم 2)، المنصورة، الدقهلية</p>
+                                      <p class="card-text"><span><i class='fas fa-map-marker-alt'></i>&nbsp;&nbsp;</span> Street 1, Mansoura Qism 2, Mansoura, Dakahlia Governorate, Egypt</p>
+                                      <p class="card-text"><span><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;</span> +20 50 2396781</p>
+                                      <p class="card-text"><span class="fas"><i class="far fa-clock"></i>&nbsp;&nbsp;</span> Open Seven days for 24 hours</p>
+                                    </div>
+                                    <div class="card-body">
+                                      <a href="register.html" class="btn btn-danger">Send Request</a>
+                                      <a href="#" class="btn btn-white border border-dark direction" data-toggle="modal" data-target="#geoLoc6-first">Direction</a>
+                                      <div class="modal fade" id="geoLoc6-first" tabindex="-1" role="dialog" aria-labelledby="geoLoc6-firstLabel" aria-hidden="true">
+                                          <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                              <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                  <span aria-hidden="true">&times;</span>
+                                                </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <div class="mapouter"><div class="gmap_canvas"><iframe class="w-100" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Street%201%2C%20Mansoura%20Qism%202%2C%20Mansoura%2C%20Dakahlia%20Governorate%2C%20Egypt&t=k&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;}.gmap_canvas {overflow:hidden;background:none!important;}</style></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                    </div>
+                    </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   <section>
+      <div class="row text-center mx-auto w-50">
+        <div class="p-3 location"><a id="loc1" href="#location1">Cairo</a></div>
+        <div class="p-3 location"><a id="loc2" href="#location2">Alexandria</a></div>
+        <div class="p-3 location"><a id="loc3" href="#location3">Al-Gharbia</a></div>
+        <div class="p-3 location"><a id="loc4" href="#location4">Al-Beheira</a></div>
+        <div class="p-3 location"><a id="loc5" href="#location5">Qena</a></div>
+      </div>
+      <div class="container p-5">
+          <div class="row m-3 d-flex justify-content-center" id="locations">
+              <div class="col-md-4">
+                  <div class="card border-0" style="width: 18rem;">
+                      <img src="../images/bags-fresh-blood.jpg" class="card-img-top img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Cairo Central Blood Bank</h5>
+                        <p class="card-text"><span class="fas">&#xf095;&nbsp;&nbsp;</span>Phone: 25742667- 25744915</p>
+                      </div>
+                      <div class="card-body">
+                        <a href="#" class="btn btn-danger">Send Request</a>
+                        <a href="#" class="btn btn-white border border-dark direction">Direction</a>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card border-0" style="width: 18rem;">
+                      <img src="../images/bags-fresh-blood.jpg" class="card-img-top img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Cairo Central Blood Bank</h5>
+                        <p class="card-text"><span class="fas">&#xf095;&nbsp;&nbsp;</span> 25742667- 25744915</p>
+                      </div>
+                      <div class="card-body">
+                        <a href="#" class="btn btn-danger">Send Request</a>
+                        <a href="#" class="btn btn-white border border-dark direction">Direction</a>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card border-0" style="width: 18rem;">
+                      <img src="../images/bags-fresh-blood.jpg" class="card-img-top img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Cairo Central Blood Bank</h5>
+                        <p class="card-text fa"><span class="fas">&#xf095;&nbsp;&nbsp;</span> 25742667- 25744915</p>
+                      </div>
+                      <div class="card-body">
+                        <a href="#" class="btn btn-danger">Send Request</a>
+                        <a href="#" class="btn btn-white border border-dark direction">Direction</a>
+                      </div>
+                    </div>
+              </div>
+          </div>
+      </div>
+    </section>
+--> 
+  
+    <footer>
+        <div id='footer' class='text-center'>
+            <div>
+              <ul class='text-uppercase'>
+                <li><a href='../home.html'>home</a></li>
+                <li><a href='register.html'>donor</a></li>
+                <li><a href='login.html'>login</a></li>
+                <li><a href='about.html'>about</a></li>
+                <li><a href='contactUs.html'>contact us</a></li>
+              </ul>
+            </div>
+            <div id='social-icons'>
+              <i class='fab fa-twitter fa-2x text-white m-2'></i>
+              <i class='fab fa-facebook-f fa-2x text-white m-2'></i>
+              <i class='fab fa-youtube fa-2x text-white m-2'></i>
+              <i class='fab fa-instagram fa-2x text-white m-2'></i>
+              <i class='fab fa-google-plus-g fa-2x text-white m-2'></i>
+              <i class='fab fa-behance fa-2x text-white m-2'></i>
+            </div>
+        </div>
+    </footer>
+  
+  <script src='../js/all.min.js'></script>
+  <script src='../js/jquery-3.4.1.min.js'></script>
+  <script src='../js/popper.min.js'></script>
+  <script src='../js/bootstrap.min.js'></script>
+  <script src='../js/main.js'></script>
+       <!-- $("#loc1").click(function(){
+        
+      document.getElementById("locations").innerHTML = temp;
+      })
+       $("#loc2").click(function(){
+        let temp = "";
+        temp += `<div class="col-md-4">
+                  <div class="card border-0" style="width: 18rem;">
+                      <img src="../images/8038134.jpg" class="card-img-top img-fluid" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Bakos Blood Bank</h5>
+                        <p class="card-text"><span class="fas">&#xf095;&nbsp;&nbsp;</span> 035030502- 035030230</p>
+                      </div>
+                      <div class="card-body">
+                        <a href="#" class="btn btn-danger">Send Request</a>
+                        <a href="#" class="btn btn-white border border-dark direction">Direction</a>
+                      </div>
+                    </div>
+              </div>`;
+      document.getElementById("locations").innerHTML = temp;
+      })
+      $("#loc3").click(function(){
+        let temp = "";
+        temp += `<div class="col-md-4">
+                    <div class="card border-0" style="width: 18rem;">
+                        <img src="../images/save-blood-concept_1017-19259.jpg" class="card-img-top img-fluid" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Tanta Blood Bank</h5>
+                          <p class="card-text"><span class="fas">&#xf095;&nbsp;&nbsp;</span> 0403359990- 0403335874</p>
+                        </div>
+                        <div class="card-body">
+                          <a href="#" class="btn btn-danger">Send Request</a>
+                          <a href="#" class="btn btn-white border border-dark direction">Direction</a>
+                        </div>
+                      </div>
+                </div>`;
+      document.getElementById("locations").innerHTML = temp;
+      })
+      $("#loc4").click(function(){
+        let temp = "";
+        temp += `<div class="col-md-4">
+                      <div class="card border-0" style="width: 18rem;">
+                          <img src="../images/section6.jpg" class="card-img-top img-fluid" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">Damnhour Blood Bank</h5>
+                            <p class="card-text"><span class="fas">&#xf095;&nbsp;&nbsp;</span>0453331685- 0453316496</p>
+                          </div>
+                          <div class="card-body">
+                            <a href="#" class="btn btn-danger">Send Request</a>
+                            <a href="#" class="btn btn-white border border-dark direction">Direction</a>
+                          </div>
+                        </div>
+                  </div>`;
+        document.getElementById("locations").innerHTML = temp;
+      })
+      let location5Link = document.getElementById("loc5");
+      location5Link.onclick = function(){
+        let temp="";
+        temp += `<div class="col-md-4">
+                        <div class="card border-0" style="width: 18rem;">
+                            <img src="../images/40621677_l.jpg" class="card-img-top img-fluid" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Qena Blood Bank</h5>
+                              <p class="card-text"><span class="fas">&#xf095;&nbsp;&nbsp;</span> 096532514- 0965325720</p>
+                            </div>
+                            <div class="card-body">
+                              <a href="#" class="btn btn-danger">Send Request</a>
+                              <a href="#" class="btn btn-white border border-dark direction">Direction</a>
+                            </div>
+                          </div>
+                    </div>`;
+        document.getElementById("locations").innerHTML = temp;
+      }-->
+</body>
+</html>

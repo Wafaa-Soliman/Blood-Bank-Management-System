@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Blood Bank Management System</title>
+  <link rel='icon' type='image/png' href='../images/icon.png' class='rounded'/>
+  <link rel='stylesheet' href='../css/all.min.css' />
+  <link rel='stylesheet' href='../css/bootstrap.min.css' />
+  <link rel='stylesheet' href='../css/style.css' />
+  <style>
+      footer #footer{background-color: #DC3545;}
+  #footer ul li {list-style: none;display: inline-block;font-weight: bolder;}
+  #footer ul li a{text-decoration: none;color: #ffffff;padding: 10px;}
+  </style>
+</head>
+<body>
+    <header>
+        <div>
+          <div class='float-left'><img class='img-fluid' src='../images/logo.png' alt='logo'/></div>
+          <div class='float-right m-5'>
+            <a class='bg-danger text-white text-decoration-none font-weight-bold rounded py-3 px-5' href='register.html'>Sign Up</a>
+            <a class='bg-danger text-white text-decoration-none font-weight-bold rounded py-3 px-5' href='login.html'>Login</a>
+          </div>
+          <div class='clearfix'></div>
+        </div>
+
+    <nav class='navbar navbar-expand-lg navbar-light'>
+    <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+      <span class='navbar-toggler-icon'></span>
+    </button>
+
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+      <ul class='navbar-nav mr-auto'>
+        <li class='nav-item active'>
+          <a class='nav-link' href='../home.html'>home</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='about.html'>about</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='register.html'>donor registeration</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='sendRequest.html'>send request</a>
+
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='veiwRequest.html'>view request</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='camps.html'>camps</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='login.html'>login</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='search.html'>search</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='contactUs.html'>contact us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  </header>
+ 
+
+ <section id="Login">
+        <div class="row ">
+           <div class="col d-flex justify-content-center align-items-center">
+            <div class="container w-50  text-center p-5 ">
+              <h2 class="text-center">Welcome</h2>
+              <img src="../images/save-blood-concept_1017-19259.jpg" id="userimg"  class="img-thumbnail img-fluid rounded-circle" style="width: 75px; height: 75px;"  alt="">
+              <form class="form-group" method="post" action="logindb.php">
+                  <label>User Name:</label>
+                  <input type="Text" name="" value="" class="form-control" placeholder="Enter Your User Name">
+                  <label>Password:</label>
+                  <input type="password" name="" value="" class="form-control" placeholder="Please Note That Password is Casesensitive"><br>
+                  <button type="submit" name="" id="" class="btn btn-danger text-center">Log In</button>
+              </form>  
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  
+    <footer>
+        <div id='footer' class='text-center'>
+            <div>
+              <ul class='text-uppercase'>
+                <li><a href='../home.html'>home</a></li>
+                <li><a href='register.html'>donor</a></li>
+                <li><a href='login.html'>login</a></li>
+                <li><a href='about.html'>about</a></li>
+                <li><a href='contactUs.html'>contact us</a></li>
+              </ul>
+            </div>
+            <div id='social-icons'>
+              <i class='fab fa-twitter fa-2x text-white m-2'></i>
+              <i class='fab fa-facebook-f fa-2x text-white m-2'></i>
+              <i class='fab fa-youtube fa-2x text-white m-2'></i>
+              <i class='fab fa-instagram fa-2x text-white m-2'></i>
+              <i class='fab fa-google-plus-g fa-2x text-white m-2'></i>
+              <i class='fab fa-behance fa-2x text-white m-2'></i>
+            </div>
+        </div>
+    </footer>
+
+  <script src='./js/all.min.js'></script>
+  <script src='./js/jquery-3.4.1.min.js'></script>
+  <script src='./js/popper.min.js'></script>
+  <script src='./js/bootstrap.min.js'></script>
+  <script src='./js/main.js'></script>
+</body>
+</html>

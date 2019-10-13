@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Blood Bank Management System</title>
+  <link rel='icon' type='image/png' href='../images/icon.png' class='rounded' />
+  <link rel='stylesheet' href='../css/all.min.css' />
+  <link rel='stylesheet' href='../css/bootstrap.min.css' />
+  <link rel='stylesheet' href='../css/style.css' />
+  <style>
+    footer #footer {
+      background-color: #DC3545;
+    }
+
+    #footer ul li {
+      list-style: none;
+      display: inline-block;
+      font-weight: bolder;
+    }
+
+    #footer ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 10px;
+    }
+
+    .location #loc1 {
+      cursor: pointer;
+      color: #196cb3;
+      font-weight: bold
+    }
+
+    .location a {
+      color: #555555;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .location a:hover,
+    .location #loc1LINK:hover {
+      color: #ACBECC;
+      text-decoration: underline;
+    }
+
+    .direction:hover {
+      color: cornsilk;
+      background-color: black
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <div class='float-left'><img class='img-fluid' src='../images/logo.png' alt='logo' /></div>
+      <div class='float-right m-5'>
+        <a class='bg-danger text-white text-decoration-none font-weight-bold rounded py-3 px-5'
+          href='register.html'>Sign Up</a>
+        <a class='bg-danger text-white text-decoration-none font-weight-bold rounded py-3 px-5'
+          href='login.html'>Login</a>
+      </div>
+      <div class='clearfix'></div>
+    </div>
+
+    <nav class='navbar navbar-expand-lg navbar-light'>
+      <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarSupportedContent'
+        aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+        <span class='navbar-toggler-icon'></span>
+      </button>
+
+      <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'>
+            <a class='nav-link' href='../home.html'>home</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='about.html'>about</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='register.html'>donor registeration</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='sendRequest.html'>send request</a>
+
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='veiwRequest.html'>view request</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='camps.html'>camps</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='login.html'>login</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='search.html'>search</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='contactUs.html'>contact us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="about_banner d-flex align-items-center">
+    <h2 class="text-light font-weight-bold">Who we are</h2>
+  </section>
+
+  <section class="help_way row bg-light">
+    <div class="help_details col-md-6">
+      <span class="text-uppercase">who we are</span>
+      <h2 class="mb-5">Ways to help</h2>
+      <p class="w-75 mb-5">
+        Blood Center is public donation center with blood donation members in the changing health care system. Founded
+        in
+        1978, Blood Center is one of the nation’s oldest and largest nonprofit transfusion medicine organizations. We
+        provide a blood and volunteer services across the US. With our national footprint, deep community roots and
+        specialized services, we are the thread that connects people and resources together to fuel progress in
+        transfusion medicine.
+      </p>
+      <div class="help_list d-flex ml-3">
+        <ul class="list-unstyled">
+          <li>Inspiring people to give blood</li>
+          <li>Specialist blood donors and clinical supervision.</li>
+          <li>Producing a safe and ready blood supply</li>
+        </ul>
+        <ul class="list-unstyled">
+          <li>Increasing communication with our members.</li>
+          <li>High quality assessment, diagnosis and treatment.</li>
+          <li>Offering specialized patient services and pharmaceuticals</li>
+        </ul>
+      </div>
+    </div>
+    <div class="help_img col-md-6"></div>
+  </section>
+
+  <section class="offer row h-100">
+    <div class="offer_img col-md-6 my-5"></div>
+    <div class="offer_details pl-5 my-5 py-5 col-md-6">
+      <h2>What we offer</h2>
+      <div class="offer_list d-flex py-4">
+        <div class="w-50">
+          <h3>Blood product</h3>
+          <ul class="list-unstyled">
+            <li>Red Blood Cells</li>
+            <li>Plasma Products</li>
+            <li>Platelet Product</li>
+            <li>Blood Products for Research</li>
+            <li>Whole Blood</li>
+          </ul>
+        </div>
+        <div class="w-50">
+          <h3>Biomedical Services</h3>
+          <ul class="list-unstyled">
+            <li>Blood and Diagnostic testing</li>
+            <li>Blood group serology</li>
+            <li>HLA testing</li>
+            <li>Immunohematology Reference lab testing</li>
+            <li>Molecular testing</li>
+            <li>Neutrophil testing</li>
+            <li>Infectious disease testing
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="call-us py-5">
+    <div class="call-layout container py-5 text-white">
+      <div class="row">
+        <div class="col-8">
+          <h2 class="my-3">Call us (204) 486-6548</h2>
+          <p class="my-3 mx-4">or click the link below to book your appointment</p>
+          <a href="#" class="btn btn-danger font-weight-bold p-4 my-3">Make an Appointment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div id='footer' class='text-center'>
+      <div>
+        <ul class='text-uppercase'>
+          <li><a href='../home.html'>home</a></li>
+          <li><a href='register.html'>donor</a></li>
+          <li><a href='login.html'>login</a></li>
+          <li><a href='about.html'>about</a></li>
+          <li><a href='contactUs.html'>contact us</a></li>
+        </ul>
+      </div>
+      <div id='social-icons'>
+        <i class='fab fa-twitter fa-2x text-white m-2'></i>
+        <i class='fab fa-facebook-f fa-2x text-white m-2'></i>
+        <i class='fab fa-youtube fa-2x text-white m-2'></i>
+        <i class='fab fa-instagram fa-2x text-white m-2'></i>
+        <i class='fab fa-google-plus-g fa-2x text-white m-2'></i>
+        <i class='fab fa-behance fa-2x text-white m-2'></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src='../js/all.min.js'></script>
+  <script src='../js/jquery-3.4.1.min.js'></script>
+  <script src='../js/popper.min.js'></script>
+  <script src='../js/bootstrap.min.js'></script>
+  <script src='../js/main.js'></script>
+</body>
+
+</html>
